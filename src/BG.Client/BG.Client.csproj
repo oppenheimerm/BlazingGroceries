@@ -5,11 +5,4 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
-
-<<<<<<< HEAD
-  <ItemGroup>
-  </ItemGroup>
-
-=======
->>>>>>> 46e1b9c20f3a143137bab5c21240343087be89d2
 </Project>
