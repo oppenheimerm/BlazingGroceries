@@ -1,6 +1,0 @@
-@BG.Items_HostAddress = http://localhost:5199
-
-GET {{BG.Items_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
