@@ -8,7 +8,7 @@ namespace BG.Shared.Interface
     {
         Task<Response> CreateAsync(T entity);
         Task<Response> UdateAsync(T entity);
-        Task<Response> Delete(T entity);
+        Task<Response> DeleteAsync(T entity);
         Task<IEnumerable<T>> GetAllAsync();
         Task<T> FindByIdAsync(int Id);
         Task<T> FindByIdAsync(Guid Id);
