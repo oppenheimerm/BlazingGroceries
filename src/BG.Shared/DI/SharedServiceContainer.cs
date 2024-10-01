@@ -35,6 +35,13 @@ namespace BG.Shared.DI
             return services;    
         }
 
+
+        /// <summary>
+        /// Setup global <see cref="GlobalException"/> middleware and restrict client access
+        /// with <see cref="APIGatewayListener"/>
+        /// </summary>
+        /// <param name="app"></param>
+        /// <returns></returns>
         public static IApplicationBuilder UseSharedPolicies(this IApplicationBuilder app)
         {
             // Use our global exception

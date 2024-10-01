@@ -1,8 +1,7 @@
-﻿
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
-namespace BG.Models
+namespace BG.Products.API.Domain.Entities
 {
     public class Category
     {
@@ -19,6 +18,6 @@ namespace BG.Models
         [Required]
         public string? Image { get; set; }
 
-        public ICollection<Models.Category>? Products { get; set; }
+        public ICollection<Category>? Products { get; set; }
     }
 }
