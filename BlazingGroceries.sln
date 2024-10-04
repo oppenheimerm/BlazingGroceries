@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BG.Shared", "src\BG.Shared\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BG.Products.API", "src\BG.Products.API\BG.Products.API\BG.Products.API.csproj", "{94EABE97-7F24-4325-9E92-98BCACFB3FB0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BG.Orders.API", "src\BG.Orders.API\BG.Orders.API.csproj", "{00B84ED2-AE79-4CA5-991C-446BE0B54AA0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{94EABE97-7F24-4325-9E92-98BCACFB3FB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94EABE97-7F24-4325-9E92-98BCACFB3FB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94EABE97-7F24-4325-9E92-98BCACFB3FB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00B84ED2-AE79-4CA5-991C-446BE0B54AA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00B84ED2-AE79-4CA5-991C-446BE0B54AA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00B84ED2-AE79-4CA5-991C-446BE0B54AA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00B84ED2-AE79-4CA5-991C-446BE0B54AA0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

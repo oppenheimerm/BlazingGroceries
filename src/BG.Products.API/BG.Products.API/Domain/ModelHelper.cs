@@ -1,5 +1,5 @@
-﻿using BG.Products.API.Domain.DTO;
-using BG.Products.API.Domain.Entities;
+﻿using BG.Shared.Domain.Entities;
+using BG.Shared.Domain.Entities.DTO;
 
 namespace BG.Products.API.Domain
 {

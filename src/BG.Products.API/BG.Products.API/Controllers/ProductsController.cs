@@ -1,8 +1,8 @@
 ﻿using BG.Products.API.Domain;
-using BG.Products.API.Domain.DTO;
 using BG.Products.API.Interfaces;
 using BG.Shared;
 using BG.Shared.APIResponse;
+using BG.Shared.Domain.Entities.DTO;
 using Microsoft.AspNetCore.Mvc;
 
 

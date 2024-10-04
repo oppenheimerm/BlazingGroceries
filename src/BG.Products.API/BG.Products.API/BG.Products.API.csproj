@@ -22,4 +22,9 @@
 	  <ProjectReference Include="..\..\BG.Shared\BG.Shared.csproj" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Folder Include="Domain\DTO\" />
+	  <Folder Include="Domain\Entities\" />
+	</ItemGroup>
+
 </Project>
