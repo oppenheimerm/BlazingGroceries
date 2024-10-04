@@ -1,9 +1,9 @@
 ﻿using BG.Products.API.Data;
-using BG.Products.API.Domain.Entities;
 using BG.Products.API.Interfaces;
 using BG.Shared;
 using BG.Shared.APIResponse;
 using BG.Shared.APIServiceLogs;
+using BG.Shared.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 

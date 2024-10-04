@@ -1,8 +1,8 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿
+using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
-using BG.Shared;
 
-namespace BG.Products.API.Domain.Entities
+namespace BG.Shared.Domain.Entities
 {
     public class Product
     {
@@ -24,7 +24,7 @@ namespace BG.Products.API.Domain.Entities
         public decimal? Price { get; set; }
 
         [MaxLength(256, ErrorMessage = "Image file name cannot exceed 256 characters.")]
-        public string? Image { get; set;  }
+        public string? Image { get; set; }
 
         public string? ImageUrl { get; }
 

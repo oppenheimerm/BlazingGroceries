@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
-namespace BG.Products.API.Domain.DTO
+namespace BG.Shared.Domain.Entities.DTO
 {
     public record ProductDTO
     (

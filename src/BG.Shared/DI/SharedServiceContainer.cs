@@ -48,7 +48,7 @@ namespace BG.Shared.DI
             app.UseMiddleware<GlobalException>();
 
             //  Register our middleware to block direct API service communication
-            app.UseMiddleware<APIGatewayListener>();
+            //app.UseMiddleware<APIGatewayListener>();
 
             return app;
         }

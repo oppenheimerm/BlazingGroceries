@@ -1,4 +1,4 @@
-﻿using BG.Products.API.Domain.Entities;
+﻿using BG.Shared.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace BG.Products.API.Data

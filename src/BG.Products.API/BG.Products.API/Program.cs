@@ -1,5 +1,7 @@
 using BG.Products.API.Data;
 using BG.Products.API.Services;
+using BG.Shared.Middleware;
+using BG.Shared;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -29,6 +31,10 @@ var app = builder.Build();
 
 // Setup our middleware
 //app.UseInfrastructurePolicy();
+
+//  Testing / Developer random error
+//app.UseMiddleware<RandomFailure>();
+
 
 
 

@@ -1,7 +1,8 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿
+using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
-namespace BG.Products.API.Domain.Entities
+namespace BG.Shared.Domain.Entities
 {
     public class Category
     {
