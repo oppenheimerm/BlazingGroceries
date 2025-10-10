@@ -1,3 +1,31 @@
 ﻿@tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* Buttons */
+
+.btn-base {
+    @apply px-5 py-2.5 text-sm font-medium text-white bg-swamp-green-300 hover:bg-swamp-green-500 focus:ring-0
+        focus:outline-none rounded-lg text-center;
+}
+
+.btn-x-small {
+    @apply px-3 py-2 text-xs font-medium text-center text-white bg-swamp-green-300 rounded-lg hover:bg-swamp-green-500 
+        focus:ring-0 focus:outline-none;
+}
+
+.btn-small {
+    @apply px-3 py-2 text-sm font-medium text-center text-white bg-swamp-green-300 rounded-lg hover:bg-swamp-green-500 
+        focus:ring-0 focus:outline-none;
+}
+
+.btn-large {
+    @apply px-5 py-3 text-base font-medium text-center text-white bg-swamp-green-300 rounded-lg 
+        hover:bg-swamp-green-500 focus:ring-0 focus:outline-none;
+}
+
+.btn-x-large {
+    @apply px-6 py-3.5 text-base font-medium text-white bg-swamp-green-300 hover:bg-swamp-green-500 
+        focus:ring-0 focus:outline-none rounded-lg text-center;
+}
