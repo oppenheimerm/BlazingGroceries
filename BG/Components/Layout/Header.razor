@@ -1,0 +1,51 @@
+﻿@code {
+
+    void CategorySelected(ChangeEventArgs e)
+    {
+        
+    }
+}
+<!-- header -->
+<div class="flex justify-between p-5 shadow-md text-bg-black-500 bg-swamp-green-50">
+    <div class="flex items-center gap-8 bg-swamp-green-50">
+        <img class="h-[38px]" src="./img/logo.png" alt="BG">
+        <div>
+            <!-- dropdown here -->
+            <div class="hidden md:block">
+                <select id="header-categories" class="bg-swamp-green-50 border swamp-green-200 text-bg-black-500 text-sm 
+                        rounded-full block w-full p-2.5" @onchange="CategorySelected">
+                    <option value="">Categories</option>
+                    <option value="ALOL">Alcohol</option>
+                    <option value="BAKE">Bakery</option>
+                    <option value="FTVG">Fruit & Vegetables</option>
+                    <option value="BAKE">Bakery</option>
+                    <option value="MEAT">Meat & Fish</option>
+                    <option value="DRNK">Drinks</option>
+                    <option value="OTHR">Laundry & Cleaning</option>
+                </select>
+            </div>
+        </div>
+        <!-- search -->
+        <div class="md:flex gap-3 items-center border border-swamp-green-200 rounded-full p-2 px-5
+            hidden">
+            <span class="material-symbols-rounded">
+                search
+            </span>
+            <input class="outline-none bg-swamp-green-50" type="text" placeholder="Search ..." id="header-search" name="search"/>
+        </div>
+    </div>    
+    <!-- rhs-->
+    <div class="flex items-center gap-4">
+        <div class="flex flex-col items-center justify-center gap-0.5 cursor-pointer">
+            <div class="relative">
+                <span class="material-symbols-rounded">
+                    shopping_cart
+                </span>
+                <span class="absolute left-auto -ml-1 top-0 rounded-full bg-red-500 px-1 py-0 text-xs text-white">0</span>
+            </div>
+        </div>
+        <button type="button" class="text-sm font-semibold btn-base focus:ring-blue-300 text-white">
+            Log in
+        </button>
+    </div>
+</div>
