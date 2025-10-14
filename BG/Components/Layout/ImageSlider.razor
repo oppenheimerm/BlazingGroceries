@@ -1,0 +1,66 @@
+﻿@rendermode InteractiveServer
+
+
+@code {
+    private List<string> Items = new()
+    {
+        "./img/assets/category/alcohol.jpg",
+        "./img/assets/category/beverages.jpg",
+        "./img/assets/category/dairy.jpg"
+    };
+
+    private int CurrentIndex = 0;
+
+
+    private void Next()
+    {
+        CurrentIndex = (CurrentIndex + 1) % Items.Count;
+    }
+
+    private void Previous()
+    {
+        CurrentIndex = (CurrentIndex - 1 + Items.Count) % Items.Count;
+    }
+
+    private void GoTo(int index)
+    {
+        CurrentIndex = index;
+    }
+
+}
+
+<div class="relative w-full overflow-hidden">
+    <div class="flex transition-transform duration-500 ease-in-out" style="transform: translateX(-@((CurrentIndex * 100))%)">
+        @foreach (var item in Items)
+        {
+            <div class="w-full flex-shrink-0">
+                <img src="@item" alt="Carousel item" class="w-full h-[200px] md:h-[400px] object-cover rounded-2xl" />
+            </div>
+        }
+    </div>
+
+    <!-- Navigation Buttons -->
+    <button @onclick="Previous" class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-swamp-green-300 p-2 rounded-full shadow hover:bg-swamp-green-600">
+        <div class="rounded-full h-[24px] w-[24px]">
+            <span class="material-symbols-rounded text-[16px] ml-1">
+                arrow_back_ios
+            </span>
+        </div>
+        </button>
+    <button @onclick="Next" class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-swamp-green-300 p-2 rounded-full shadow hover:bg-swamp-green-600">
+        <div class="rounded-full h-[24px] w-[24px]">
+            <span class="material-symbols-rounded text-[16px] ml-1">
+                arrow_forward_ios
+            </span>
+        </div>
+     </button>
+
+    <!-- Indicators -->
+    <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+        @for (int i = 0; i < Items.Count; i++)
+        {
+            <span class="w-3 h-3 rounded-full cursor-pointer @(i == CurrentIndex ? "bg-blue-500" : "bg-gray-300")" @onclick="() => GoTo(i)"></span>
+        }
+    </div>
+</div>
+
