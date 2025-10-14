@@ -1,4 +1,5 @@
 using BG.Components;
+using BG.Helpers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +8,9 @@ builder.AddServiceDefaults();
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+
+
+builder.Services.AddScoped<IUIHelpers, UIHelpers>();
 
 var app = builder.Build();
 

@@ -1,4 +1,14 @@
-﻿@code {
+﻿@inject NavigationManager NavigationManager
+@inject IUIHelpers UIHelpers
+
+@code {
+
+    List<Category>? Categories { get; set; }
+
+    protected async override Task OnInitializedAsync()
+    {
+        Categories = UIHelpers.GetCategories();
+    }
 
     void CategorySelected(ChangeEventArgs e)
     {
@@ -11,19 +21,23 @@
         <img class="h-[38px]" src="./img/logo.png" alt="BG">
         <div>
             <!-- dropdown here -->
-            <div class="hidden md:block">
-                <select id="header-categories" class="bg-swamp-green-50 border swamp-green-200 text-bg-black-500 text-sm 
-                        rounded-full block w-full p-2.5" @onchange="CategorySelected">
-                    <option value="">Categories</option>
-                    <option value="ALOL">Alcohol</option>
-                    <option value="BAKE">Bakery</option>
-                    <option value="FTVG">Fruit & Vegetables</option>
-                    <option value="BAKE">Bakery</option>
-                    <option value="MEAT">Meat & Fish</option>
-                    <option value="DRNK">Drinks</option>
-                    <option value="OTHR">Laundry & Cleaning</option>
-                </select>
-            </div>
+            @{
+                if(Categories is not null)
+                {
+                    <div class="hidden md:block">
+                        <select id="header-categories" class="bg-swamp-green-50 border swamp-green-200 text-bg-black-500 text-sm 
+                                rounded-full block w-full p-2.5" @onchange="CategorySelected">
+
+                            <option value="">Categories</option>
+                            @foreach(var _category in Categories)
+                            {
+                                <option value="@_category.CategoryCode">@_category.CategoryName</option>
+                            }
+                        </select>
+                    </div>                    
+                }
+            }
+
         </div>
         <!-- search -->
         <div class="md:flex gap-3 items-center border border-swamp-green-200 rounded-full p-2 px-5
